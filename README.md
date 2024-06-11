@@ -52,3 +52,14 @@ System Resource Controller (SRC): It is used to manage resources for memory allo
 - Select and Enocde
   - Takes Gra, Grb, Grc, Rin, Rout, and BAout signals and generates R0in - R15in signals and R0out - R15out signals
   - Grant signals are ANDed with the opcode decodes and fed into the decoder to select Rin and Rout signals (they have to be ANDed again with Rin signal and Rout signal)
+
+## Phase 3
+- Control Unit
+  - This is where you put everything you have designed previously into one single control unit
+  - The way we designed it was for each instruction we had different states that were used to state what happens in each instruction decoding process
+  - fetch0: increment the PC and load the address into MAR
+  - fetch1: load in PC and read the memory
+  - fetch2: load that data into MDR
+- Opcode decode
+  - Select the intruction based on the opcode
+  - Based on the state of the opcode, move to next step
