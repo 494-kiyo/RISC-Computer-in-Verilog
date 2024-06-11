@@ -19,7 +19,14 @@ This is a recreation of a school project in Verilog. It's components are a proce
   - Select and Encode Logic signals: transfer contents from the bus or to the bus
   - CON FF for branching
   - 32-bit registers In.Port and Out.Port
-
+- Bus
+  - 32-to-5 encoder that feeds into a 32:1 multiplexer
+  - The output of the multiplexer is BusMuxOut which is the bus
+  - Data line, address line, and control line
+- Memory Data Register
+  - Two inputs: BusMuxOut and Mdatain
+  - Two outputs: BusMuxIn-MDR or to memory chip
+- Control Unit (in Phase 3)
 #### Terminologies
 System Resource Controller (SRC): It is used to manage resources for memory allocation, task scheduling, power management, and peripheral device control. The difference between an SRC and a processor is that a processor's main role is to execute instructions. An SRC can be incorporated into a processor.
 
